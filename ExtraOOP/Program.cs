@@ -98,7 +98,13 @@ class Program
         Console.WriteLine(dollar.Sum);
         Console.WriteLine(dollar.Sum);
 
+        // Definition of compound assignment operators
 
+        Money money = new Money() { Value = 0 };
+        money.Value += 1;
+        money.Value += 1;
+        money.Value += 1;
+        Console.WriteLine($"money.Value: {money.Value}");
     }
 }
 public class Counter
