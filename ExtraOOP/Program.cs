@@ -105,6 +105,108 @@ class Program
         money.Value += 1;
         money.Value += 1;
         Console.WriteLine($"money.Value: {money.Value}");
+        Console.WriteLine();
+        
+        
+        // Indexations
+        
+        
+        var microsoft = new Company(new[]
+        {
+            new Person("Tom"), new Person("Bob"), new Person("Jill"), new Person("Alice")
+        });
+        Person firstPerson = microsoft[0];
+        Console.WriteLine(firstPerson.Name);
+
+        microsoft[0] = new Person("Bakhtovar");
+        Console.WriteLine(microsoft[1].Name);
+
+        User tom = new User();
+        tom["name"] = "Tom";
+        tom["email"] = "tom@gmail.com";     
+        tom["phone"] = "+992 92-666-14-88";
+        Console.WriteLine(tom["name"]);
+        
+        Matrix matrix = new Matrix();
+        Console.WriteLine(matrix[0, 0]);
+        // matrix[0, 0] = 111;
+        Console.WriteLine(matrix[0, 0]);
+        Console.WriteLine();
+
+        var google = new Company(new[]
+        {
+            new Person("Bob"), new Person("Jill"), new Person("Alice")
+        });
+        Console.WriteLine(google[0].Name);
+        Console.WriteLine(google["Jill"].Name);
+        Console.WriteLine();
+        
+        // Exercises from indexations
+        // #1
+        Team team = new Team([
+            new Soccer("Messi", 10),
+            new Soccer("Ronaldo", 7),
+            new Soccer("Lewandowski", 9),
+            new Soccer("Neymar", 11),
+            new Soccer("Grizman", 8),
+            new Soccer("Alonso", 6),
+            new Soccer("Ramos", 4),
+            new Soccer("Arnold", 66),
+            new Soccer("Virgil", 2),
+            new Soccer("Pepe", 5),
+            new Soccer("De Gea", 1)
+        ]);
+        Console.WriteLine(team[0].Name);
+        Console.WriteLine(team[0].Number);
+        Console.WriteLine();
+        
+        
+        // #2
+        Dictionary dict = new Dictionary();
+        Console.WriteLine(dict["blue"]);
+        dict["blue"] = "голубой";
+        Console.WriteLine(dict["blue"]);
+        Console.WriteLine();
+        
+        
+        // Reference variables and Returning a reference
+        int a = 5;
+        ref int aRef = ref a;
+        Console.WriteLine(a);
+        aRef = 4;
+        Console.WriteLine(a);
+        aRef = 67;
+        Console.WriteLine(a);
+        
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        ref int numbersRef = ref Find(4, numbers);
+        numbersRef = 67;
+        Console.WriteLine(numbers[3]);
+
+        ref int Find(int number, int[] numbers)
+        {
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] == number)
+                {
+                    return ref numbers[i];
+                }
+            }
+            throw new ApplicationException("Not found");
+        }
+
+        int c = 51;
+        int d = 8;
+        ref int pointer = ref Max(ref c, ref d);
+        pointer = 34;
+        Console.WriteLine($"c: {c}, d: {d}");
+
+        ref int Max(ref int n1, ref int n2)
+        {
+            if (n1 > n2)
+                return ref n1;
+            return ref n2;
+        }
     }
 }
 public class Counter
