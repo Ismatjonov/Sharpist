@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HOME\\RiderProjects\\Sharpist\\Interfaces\\Interfaces.csproj": {}
+    "C:\\Users\\HOME\\RiderProjects\\NewSharpist\\Interfaces\\Interfaces.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HOME\\RiderProjects\\Sharpist\\Interfaces\\Interfaces.csproj": {
+    "C:\\Users\\HOME\\RiderProjects\\NewSharpist\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HOME\\RiderProjects\\Sharpist\\Interfaces\\Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\HOME\\RiderProjects\\NewSharpist\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "C:\\Users\\HOME\\RiderProjects\\Sharpist\\Interfaces\\Interfaces.csproj",
+        "projectPath": "C:\\Users\\HOME\\RiderProjects\\NewSharpist\\Interfaces\\Interfaces.csproj",
         "packagesPath": "C:\\Users\\HOME\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HOME\\RiderProjects\\Sharpist\\Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\HOME\\RiderProjects\\NewSharpist\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

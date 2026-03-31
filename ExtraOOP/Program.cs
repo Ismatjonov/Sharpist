@@ -207,6 +207,8 @@ class Program
                 return ref n1;
             return ref n2;
         }
+
+        Console.WriteLine("Test Code!");
     }
 }
 public class Counter
