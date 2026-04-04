@@ -209,6 +209,7 @@ class Program
         }
 
         Console.WriteLine("Hello, It's new GitHub Account!");
+        Console.WriteLine("Check!");
     }
 }
 public class Counter
