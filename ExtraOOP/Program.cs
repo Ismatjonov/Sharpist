@@ -207,9 +207,6 @@ class Program
                 return ref n1;
             return ref n2;
         }
-
-        Console.WriteLine("Hello, It's new GitHub Account!");
-        Console.WriteLine("Check!");
     }
 }
 public class Counter
