@@ -1,4 +1,6 @@
-﻿namespace ExtraOOP;
+﻿using System.Net.WebSockets;
+
+namespace ExtraOOP;
 
 class Program
 {
@@ -207,6 +209,26 @@ class Program
                 return ref n1;
             return ref n2;
         }
+        Console.WriteLine();
+            
+        
+        // EXTENSION OF TYPES
+        
+        string s = "Today is a nice weather! ";
+        char r = 'a';
+        int i = s.CharCount(r);
+        Console.WriteLine(i);
+
+        // int[] num1 = [1, 2, 3, 4];
+        // int[] num2 = [5, 6];
+        // int[] num3 = num1 + num2;
+        //
+        // foreach (int i in num3)
+        // {
+        //     Console.Write(i);
+        //     Console.Write(" ");
+        // }
+
     }
 }
 public class Counter
@@ -373,3 +395,55 @@ class Euro
         return new Euro { Sum = dollars.Sum / 1.14M };
     }
 }
+
+public static class StringExtension
+{
+    public static int CharCount(this string str, char c)
+    {
+        int count = 0;
+        for (int i = 0; i < str.Length; i++)
+        {
+            if (str[i] == c)
+            {
+                count++;
+            }
+        }
+        // extension(string str)
+        // {
+        //     for (int i = 0; i < str.Length; i++)
+        //     {
+        //         if (str[i] == c)
+        //         {
+        //             count++;
+        //         }
+        //     }
+        // }
+        return count;
+    }
+}
+
+// static class ArrayExtension
+// {
+//     extension(int[])
+//     {
+//         public static int[] operator +(int[] array, int[] other)
+//         {
+//             // return array is that connected both outputs
+//             int[] new_array = new int[array.Length + other.Length]; 
+//             int j = 0;  // index of total array
+//
+//             //  add elements from first array
+//             for (int i = 0; i < array.Length; i++, j++)
+//             {
+//                 new_array[j] = array[i];
+//             }
+//
+//             //  add elements from second array
+//             for (int i = 0; i < other.Length; i++, j++)
+//             {
+//                 new_array[j] = other[i];
+//             }
+//             return new_array;
+//         }
+//     }
+// }
